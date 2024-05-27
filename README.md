@@ -1,9 +1,9 @@
 # Elysia with Bun runtime
 
-## Getting Started
+## Build
 To get started with this template, simply paste this command into your terminal:
 ```bash
-bun create elysia ./elysia-example
+npm run build && npm run production 
 ```
 
 ## Development
