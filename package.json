@@ -1,17 +1,24 @@
 {
-  "name": "app",
-  "version": "1.0.50",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
-  },
-  "dependencies": {
-    "@elysiajs/swagger": "^1.0.5",
-    "elysia": "latest",
-    "mongoose": "^8.3.4"
-  },
-  "devDependencies": {
-    "bun-types": "latest"
-  },
-  "module": "src/index.js"
+	"name": "app",
+	"version": "1.0.50",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "bun run --watch src/index.ts",
+		"build":"bun build src/index.ts --outdir build/ --target bun",
+		"production":"bun run build/index.js"
+	},
+	"dependencies": {
+		"@elysiajs/swagger": "^1.0.5",
+		"elysia": "latest",
+		"mongoose": "^8.3.4"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.7.3",
+		"@eslint/js": "^9.3.0",
+		"bun-types": "latest",
+		"eslint": "9.x",
+		"globals": "^15.3.0",
+		"typescript-eslint": "^7.10.0"
+	},
+	"module": "src/index.js"
 }
