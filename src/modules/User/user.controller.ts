@@ -2,14 +2,9 @@ import { Elysia, t } from "elysia";
 import { setupUsers } from "./user.module";
 import { findById, login } from "./user.dto";
 import { db } from "@/database.provider";
-// import {
-//   InsertUserSchema,
-//   ReturnedUserSchema,
-//   UserLoginSchema,
-//   UpdateUserSchema,
-// } from "@users/users.schema";
 
-export const usersPlugin = new Elysia().use(setupUsers).group(
+
+export const userController = new Elysia().use(setupUsers).group(
   "/users",
   {
     detail: {

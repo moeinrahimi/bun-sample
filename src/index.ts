@@ -19,3 +19,6 @@ export type App = typeof app;
 // sample structure
 //https://github.com/agnyz/the-bed-stack/tree/main/src
 // bunx prisma migrate dev --name init ==> migrate prisma
+
+
+
