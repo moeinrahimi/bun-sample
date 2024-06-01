@@ -9,8 +9,12 @@ export class OrderRepository {
     return this.db.order.create({data:body})
     
   }
-  async find( ) {
-    return this.db.order.findMany()
+  async find(where:Order) {
+    return this.db.order.findMany({where:where})
+    
+  }
+  async update(id:string,body:Order) {
+    return this.db.order.update({where:{id:id},data:body})
     
   }
 }

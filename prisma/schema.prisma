@@ -23,8 +23,17 @@ model Order {
   // orderID   String   @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  completedAt DateTime?
 
   // @@index([orderID])
+}
+model Trade {
+  id        String   @id @default(uuid())
+  buyerOrderId String 
+  sellerOrderId String 
+  createdAt DateTime @default(now())
+  size      Float
+  updatedAt DateTime @updatedAt
 }
 
 enum OrderType {
