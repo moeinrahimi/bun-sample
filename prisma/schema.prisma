@@ -14,9 +14,35 @@ datasource db {
 }
 
 
+model Order {
+  id        String   @id @default(uuid())
+  type      OrderType
+  side      Side
+  size      Float
+  price     Float?
+  // orderID   String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // @@index([orderID])
+}
+
+enum OrderType {
+  LIMIT
+  MARKET
+}
+
+enum Side {
+  BUY
+  SELL
+}
+
+
 model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   password String  
   name  String?
 }
+
+
